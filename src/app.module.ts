@@ -4,10 +4,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { logEldModule } from './modules/logEld/logEld.module';
 import { QuizModule } from './modules/quiz/quiz.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [QuizModule, logEldModule, MongooseModule.forRoot(
-    "mongodb://localhost:27017/test", {
+  imports: [QuizModule, ConfigModule.forRoot(), logEldModule, MongooseModule.forRoot(
+    process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })],
