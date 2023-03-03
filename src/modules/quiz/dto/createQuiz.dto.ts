@@ -8,4 +8,4 @@ export class CreateQuizDto {
     @IsNotEmpty({ message: 'Company is a required field!' })
     @Length(3, 50)
     description: string
-}
+} 
