@@ -1,6 +1,7 @@
 # compiled output
 /dist
 /node_modules
+./src/config/push-notifications-test-b479b-firebase-adminsdk-c21ba-41f8c62505.config.ts
 
 # Logs
 logs
