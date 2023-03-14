@@ -1,4 +1,9 @@
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import {
+  MiddlewareConsumer,
+  Module,
+  NestModule,
+  RequestMethod,
+} from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -28,9 +33,9 @@ import { TokenCheckMiddleware } from './middleware/tokenCheck.middleware';
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    // consumer.apply(TokenCheckMiddleware).forRoutes({
-    //   path: *
-    // })
+    consumer.apply(TokenCheckMiddleware).forRoutes({
+      path: '*',
+      method: RequestMethod.POST,
+    });
   }
-  
 }
