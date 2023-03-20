@@ -71,3 +71,15 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+CONCEPTS COVERED: 
+1. Module
+2. Controller
+3. Service
+4. Injection
+5. Decorators
+6. DTO Validations
+7. Middlewares
+8. Guards
